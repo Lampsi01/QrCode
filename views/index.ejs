@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+ 
+</head>
+ <%- include("partials/header.ejs") %>
+
+<body>
+     
+    
+  <style>
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10% 2%;
+      
+    }
+    .Register{
+      width: 30rem;
+    }
+    section .Register h2 {
+      text-align: center;
+      text-decoration: underline;
+      padding: 10px 0 ;
+
+    }
+    .inputF{
+      padding: 10px ;
+      border-radius: 7px;
+      border: solid black 1px;
+      width: 95%;
+
+    }
+    .Register form button{
+      /* font-size: 1.3em; */
+      margin: 16px 0 ;
+       
+      width: 95%;
+
+      border-radius: 7px;
+
+    }
+    label{
+      padding : 8px 0 ;
+    }
+
+  </style>
+    <section>
+      <div class="Register">
+          <h2>
+            Qr image generator
+          </h2>
+          <form action="/QrImage" method="POST"> 
+
+            <label for="#name">full Name : </label> <br>
+            <input type="text" class="inputF" placeholder="your name" name="fullName">
+            <br>
+            <label for="#name">id_student : </label> <br>
+            <input type="text" class="inputF" placeholder="your id_student" name="id_student">
+            <br>
+            <button class="btn btn-success " type="submit">Send</button>
+
+          </form>
+      </div>
+    </section>
+</body>
+ 
+
+</html>
